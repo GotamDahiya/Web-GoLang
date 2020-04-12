@@ -10,5 +10,5 @@ Please write down what all you have contributed.
 
 Fork the repo and make all changes in another branch.
 
-This is avery basic readme file. 
+This is a very basic readme file. 
 It should be updated as the project moves along.
