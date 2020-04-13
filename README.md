@@ -7,12 +7,12 @@ There is a chat window also which allow for users to communicate with one anothe
 
 Fork the repo and make all changes in another branch.
 
-'''Technologies Used :
+```Technologies Used :
     Go 1.14.2
     MySQL Wokbench
     HTML
     JavaScript
-'''
+```
 
 ## Main Aspects
 The users data are stored in a MySQL database, namely username, name, email, hobbies, achivements and interests. A server is run which calls functions from other programs for connecting to database and search results. A SQL query is run to obtain the desired results. 
