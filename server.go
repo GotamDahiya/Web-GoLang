@@ -1,4 +1,4 @@
-// bur first run the program in the terminal/command prompt "go run server.go"
+// but first run the program in the terminal/command prompt "go run server.go"
 // Run http:/localhost:8080 in the web browser
 package main
 
