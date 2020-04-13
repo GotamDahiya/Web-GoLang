@@ -4,14 +4,19 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"net/http"
+
+	"github.com/gorilla/mux"
 )
 
-func helloWorld(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Hello World")
-}
-
 func main() {
-	http.HandleFunc("/", helloWorld)
-	http.ListenAndServe(":8080", nil)
+	fmt.Println("Server will start at http://localhost:8000")
+	connectDB()
+
+	route := mux.NewRouter()
+
+	AddApproutes(route)
+
+	log.Fatal(http.ListenAndServe(":8000", route))
 }
