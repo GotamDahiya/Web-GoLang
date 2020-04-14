@@ -25,7 +25,7 @@ function renderUsers(users) {
 	let htmlString = "";
 	if (users.length > 0) {
 		for (let index = 0; index < users.length; index++) {
-			htmlString += `<li>${users[index]['Name']}</li>`;
+			htmlString += `<li>${users[index]['Name']} ${users[index]['Email']} ${users[index]['Hobbies']} ${users[index]['Achivements']}</li>`;
 		}
 	}
 	resultContainer.innerHTML = `<ul class="list">${htmlString}</ul>`;
