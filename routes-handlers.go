@@ -24,18 +24,25 @@ func getUsers(response http.ResponseWriter, request *http.Request) {
 		user User
 		users []User
 	)
-
+	// var (
+	// 	name string
+	// 	email string
+	// 	hobbies string
+	// 	achivements string
+	// )
 
 	username := mux.Vars(request)["name"]
 
-	rows, err := db.Query("select * from User_Profile where like '%" + username + "%'")
+	rows, err := db.Query("select Name,Email,Hobbies,Achivements from User_Profile where UserName like '%"+username+"%'")
 	if err != nil {
 		fmt.Println(err)
 		returnErrorResponse(response, request)
 	}
 	for rows.Next() {
 		rows.Scan(&user.Name, &user.Email, &user.Hobbies, &user.Achivements)
+		// fmt.Println(&user.Name, &user.Email, &user.Hobbies, &user.Achivements)
 		users = append(users, user)
+		// fmt.Println(users)
 	}
 	defer rows.Close()
 
@@ -44,7 +51,7 @@ func getUsers(response http.ResponseWriter, request *http.Request) {
 		fmt.Println(jsonError)
 		returnErrorResponse(response, request)
 	}
-	if jsonError == nil {
+	if jsonResponse == nil {
 		returnErrorResponse(response, request)
 	} else {
 		response.Header().Set("Content-type","application/json")
@@ -52,7 +59,7 @@ func getUsers(response http.ResponseWriter, request *http.Request) {
 	}
 }
 	func returnErrorResponse(response http.ResponseWriter, request *http.Request) {
-		jsonResponse, err := json.Marshal("It is simple check what you have written")
+		jsonResponse, err := json.Marshal("Please check your input")
 		if err != nil {
 			panic(err)
 		}
