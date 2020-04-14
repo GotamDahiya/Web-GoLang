@@ -58,7 +58,7 @@ For references: [How to make proper Pull requests from a fork](https://help.gith
 ```
 
 ## Authors
-* **Gotam Dahiya** - *Server Backend and MySQL connection* - [GotamDahiya](https://github.com/GotamDahiya)
+* **Gotam Dahiya** - *Server Backend and MySQL connection* - [Gotam Dahiya](https://github.com/GotamDahiya)
 * **Satvik Omar** - *Chat application development. Update this if necessary* - [Satvik Omar](Github account here)
 * **Adit Danewa** - *Frontend development using HTML. Update this if necessary* - [Adit Danewa](Github account here)
 
