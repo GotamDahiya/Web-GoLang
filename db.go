@@ -1,3 +1,4 @@
+// This program connects the server to the database server_go for accessing user profiles.
 package main
 
 import (
@@ -14,3 +15,4 @@ func connectDB() {
 	fmt.Println("Database connected")
 	db, err = sql.Open("mysql","root:Abcd@1234@/server_go")
 }
+
