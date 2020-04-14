@@ -33,8 +33,6 @@ func getUsers(response http.ResponseWriter, request *http.Request) {
 		fmt.Println(err)
 		returnErrorResponse(response, request)
 	}
-	fmt.Println(rows)
-	fmt.Println(err)
 	for rows.Next() {
 		rows.Scan(&user.Name, &user.Email, &user.Hobbies, &user.Achivements)
 		users = append(users, user)
