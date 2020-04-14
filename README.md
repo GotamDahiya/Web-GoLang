@@ -38,7 +38,7 @@ Make chat application and upload it. Make a new folder called chat.
 
 ## Deployment
 * **Navigate to the cloned repository directory.**
-* **Type in the terminal "go run (*).go"**
+* **Type in the terminal "go run \*.go"**
 * **For command prompt all the files will have to be specified in the statement.**
 * **Follow the instructions printed in the terminal/command prompt.**
 
